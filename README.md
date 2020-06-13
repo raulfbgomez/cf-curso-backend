@@ -1,2 +1,2 @@
-# cf_curso_backend
+# Curso Backend JavaScript
 Curso de Backend con JavaScript en Codigo Facilito
