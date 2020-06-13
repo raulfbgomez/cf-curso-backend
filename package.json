@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/raulfbgomez/cf-curso-backend/issues"
   },
-  "homepage": "https://github.com/raulfbgomez/cf-curso-backend#readme"
+  "homepage": "https://github.com/raulfbgomez/cf-curso-backend#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }

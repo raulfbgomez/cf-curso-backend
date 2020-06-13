@@ -1,9 +1,9 @@
-const http = require('http')
+const express = require('express')
 
-function response(request, response) {
-  response.end('Hola Mundo')
-}
+const app = express()
 
-let server = http.createServer(response)
+app.get('/saludo', function(req, res) {
+  res.send(`Hello ${req.query.name}`)
+})
 
-server.listen(3000)
+app.listen(3000)
