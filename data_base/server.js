@@ -5,9 +5,11 @@ const Sequelize = require('sequelize')
 
 const app = express()
 
+const tasks = require('./controllers/tasks')
+
 app.use(bodyParser.urlencoded({ extended: true}))
 
-app.use('view engine', 'pug')
+app.set('view engine', 'pug')
 
 // let db = new sqlite3.Database('project-backend') // Crea una nueva DB
 
@@ -17,6 +19,8 @@ app.use('view engine', 'pug')
 // })
 
 // db.run('CREATE TABLE tasks(id int AUTO_INCREMENT, description varchar(255))') solo se ejecuta una vez ya que despues marcara error
+
+app.get('/tasks', tasks.home)
 
 app.post('/pendientes', function(req, res) {
   // db.run(`INSERT INTO tasks(description) VALUES (?)`, req.body.description)
